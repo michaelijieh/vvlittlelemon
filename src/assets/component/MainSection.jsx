@@ -9,7 +9,6 @@ import Meals from "./Meals";
 import Footer from "./Footer";
 
 export default function Main () {
-    // const [availableTimes, setAvailableTimes] = useState(["Select", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00"])
 
     const seededRandom = function (seed) {
         var m = 2**35 - 31;
@@ -28,7 +27,7 @@ export default function Main () {
             if(random() < 0.5) {
                 result.push(i + ':00');
             }
-            if(random() > 0.5) {
+            if(random() < 0.5) {
                 result.push(i + ':30');
             }
         }

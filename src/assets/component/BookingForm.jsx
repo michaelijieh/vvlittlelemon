@@ -1,4 +1,4 @@
-import { useReducer, useState, useEffect } from "react";
+import { useState } from "react";
 
 
 export default function BookingForm (props) {
@@ -13,8 +13,6 @@ export default function BookingForm (props) {
     const [errorTime, setErrorTime] = useState('')
     // Form Validations Error
 
-    
-
     function handleChange (e) {
         setDate(e);
         props.dispatch(e)
@@ -27,7 +25,6 @@ export default function BookingForm (props) {
     }
 
     // Form validation functions
-
     const handleBlurDate = () => {
         if (date === "") {
             setErrorDate('* Date is empty');
@@ -53,11 +50,14 @@ export default function BookingForm (props) {
     }
     // Form validation functions
 
+
     return (
         <>
             <form onSubmit={handleReserve}>
+                
                 <div className="booking-form">
-                    <label htmlFor="res-date">Choose date</label>
+                    <h1>Booking page</h1>
+                    <label className="date-label" htmlFor="res-date">Choose date</label>
                     <input type="date" 
                         id="res-date"
                         min="2025-06-01"
@@ -66,22 +66,21 @@ export default function BookingForm (props) {
                         onChange={(e)=>{handleChange(e.target.value)}}
                         onBlur={handleBlurDate}
                         aria-label="On Click"
-                        // readOnly
                         />
                     {errorDate && <p className="error-message">{errorDate}</p>}
 
-                    {date && <label htmlFor="res-time">Choose time</label>}
-                    {date && <select aria-label="On Click" id="time" value={time} onChange={(e)=>setTime(e.target.value)} onBlur={handleBlurTime}>
-                        <option value="">Select time</option>
+                    {date && <label className="time-label" htmlFor="res-time">Choose time</label>}
+                    {date && <select className="time" aria-label="On Click" id="time" value={time} onChange={(e)=>setTime(e.target.value)} onBlur={handleBlurTime}>
+                        <option className="time" value="">Select time</option>
                         {
                             props.availableTimes.availableTimes.map(availableTimes => {
-                                return <option key={availableTimes}>{availableTimes} </option>
+                                return <option className="time" key={availableTimes}>{availableTimes} </option>
                             })
                         }
                     </select>}
                     {errorTime && <p className="error-message">{errorTime}</p>}
 
-                    <label htmlFor="guests">Number of guests:{guests} </label>
+                    <label className="guest-label" htmlFor="guests">Number of guests <p>{guests}</p></label>
                     <input 
                         className="guest"
                         type="range"
@@ -96,12 +95,12 @@ export default function BookingForm (props) {
                         value={guests} 
                         onChange={(e) => setGuests(e.target.value)}
                         aria-label="On Click" />
-                    <label htmlFor="occasion">Choose Occasion</label>
-                    <select aria-label="On Click" id="occasion" key={occasion} value={occasion} onChange={(e)=> setOccasion(e.target.value)}>
+                    <label className="occasion" htmlFor="occasion">Choose Occasion</label>
+                    <select className="occasion-label" aria-label="On Click" id="occasion" key={occasion} value={occasion} onChange={(e)=> setOccasion(e.target.value)}>
                         <option value="Birthday">Birthday</option>
                         <option value="Anniversary">Anniversary</option>
                     </select>
-                    <input aria-label="On Click" className="submit-button"type="submit" value="Book Now" disabled={!isFormValid()}/>
+                    <input aria-label="On Click" className="submit-button" type="submit" value="Book Now" disabled={!isFormValid()}/>
                     
                 </div>
             </form>

@@ -2,11 +2,10 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    /* background-color: #f1f1ec; */
-    /* background-color: red; */
+
 }
 
-a, h1, h2, h3, p, ol, ul, button, select, option, input {
+a, h1, h2, h3, p, ol, ul, button, select, option {
     margin: 0;
     padding: 0;
     color: unset; 
@@ -38,7 +37,6 @@ ul > li {
     top: 0;
     left: 0;
     display: flex;
-    /* background-color: rgba(255, 255, 255, 0.2); */
     background-color: #f1f1ec;
     padding: 24px 24px;
     justify-content: center;
@@ -67,7 +65,6 @@ ul > li {
 }
 
 /* Media queries for Nav bar */
-
 @media screen and (max-width: 767px) {
 .nav.short {
     background-color: #f1f1ec;
@@ -87,8 +84,6 @@ ul > li {
     flex-direction: column;
     gap: 12px;
 }
-
-
 
 .nav-items {
     display: none;
@@ -126,8 +121,6 @@ ul > li {
 
 
 .header {
-    /* background-color: rgb(225, 108, 108); */
-    /* background: linear-gradient(to bottom, rgb(225, 108, 108), red); */
     background: linear-gradient(to bottom, #f1f1ec, rgb(238, 240, 236));
     padding: 64px 64px 0 64px;
     margin: 0;
@@ -185,7 +178,6 @@ ul > li {
   }
 
   .header {
-    /* background-color: rgb(225, 108, 108); */
     padding: 88px;
     background: linear-gradient(to bottom, #f1f1ec, rgb(220, 237, 200));
     margin: 0;
@@ -250,22 +242,40 @@ label {
     gap: 8px;
 }
 
-.submit-button {
+
+
+/* .submit-button {
+    margin: 0;
+    padding: 0;
+    color: unset; 
+    text-decoration: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 1000;
     width: auto;
     background-color: black;
     color: greenyellow;
-    padding: 8px 32px;
-    border-radius: 8px;
+    padding: 16px 48px;
+    border-radius: 16px;
     font-size: 16px;
     font-weight: 900;
     border-color: #022A0B;
     border: 2px solid #022A0B;
     cursor: grab;
+} */
+
+.submit-button {
+    padding: 16px 64px;
+    border-radius: 16px;
+    background-color: greenyellow;
+    font-size: large;
+    color: black;
+    font-weight: bold;
 }
 
 .submit-button:hover {
-    background-color: #022A0B;
-    color: lemonchiffon;
+    border: 1px solid black;
+    /* background-color: #022A0B; */
+    /* color: lemonchiffon; */
 }
 .submit-button:disabled {
     color: darkgreen;
@@ -286,17 +296,6 @@ label {
     gap: 4px;
 }
 
-.booking-form {
-    width: 25vw;
-    background-color: rgb(127, 255, 212, 0.5);
-    border-radius: 32px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-}
-
 .main {
     display: flex;
     justify-content: center;
@@ -310,20 +309,77 @@ label {
     align-items: center;
 }
 
+/* Booking form */
+.date {
+    padding: 8px;
+    font-size: 24px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+.date-label {
+    padding: 8px;
+    font-size: 24px;
+}
+
+.time {
+    font-weight: bold;
+    color: rgb(3, 86, 42);
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+}
+.time-label {
+    font-size: 24px;
+}
+
+.booking-form {
+    border: 1px solid black;
+    padding: 24px;
+    width: 260px;
+    border-radius: 32px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
 .guest {
-    height: 4px;
-    width: 120px;
+    font-size: 24px;
+    height: auto;
     border-radius: 16px;
-    background-color: #022A0B;
+    border: 1px solid black;
+    background-color: whitesmoke;
+}
+
+.guest-label {
+    font-size: 24px;
+    height: auto;
+}
+
+.guest-label > p {
+    display: flex;
+    justify-content: center;
+    align-self: center ;
+    color: rgb(3, 95, 3);
+    font-size: 24px;
+    height: auto;
+}
+
+.occasion {
+    font-size: 24px;
+}
+
+.occasion-label {
+    font-size: 24px;
+    height: auto;
+    font-weight: bold;
+    color:rgb(3, 95, 3)
 }
 
 .error-message {
     color: red;
     font-size: 12px;
-}
-
-.booking-form {
-    padding: 64px;
 }
 
 .confirmed-booking {
@@ -340,25 +396,3 @@ label {
     width: 320px;
 
 }
-
-@media screen and (max-width: 767px) {
-    
-}
-
-
-/* Media queries for Header */
-/* @media screen and (max-width: 479px) {
- 
-} */
-
-/* Media queries */
-/* @media screen and (max-width: 767px) {
-  
-  }
-} */
-
-/* Styles for screens smaller than 480px (e.g., smartphones) */
-
-
-
-/* Media queries */

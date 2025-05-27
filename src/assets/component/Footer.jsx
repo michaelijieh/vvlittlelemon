@@ -1,4 +1,3 @@
-import logo from '../images/little_lemon_logo.png'
 
 export default function Footer () {
     return (
