@@ -1,7 +1,8 @@
 .meal-card {
+    border: 1px solid black;
     padding: 32px;
     border-radius: 32px;
-    background-color: rgba(20, 41, 42, 0.1);
+    /* background-color: rgba(181, 204, 206, 0.1); */
     width: 240px;
     /* height: 320px; */
     display: flex;
