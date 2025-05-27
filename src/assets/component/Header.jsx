@@ -43,7 +43,9 @@ export default function Header () {
                                 Ut enim ad minim veniam, quis nostrud exercitation ullamco 
                                 laboris <span className="right-text">*salami*</span>nisi ut 
                                 aliquip ex ea commodo consequat. Duis <span className="right-text">
-                                    *calamari*</span>aute irure voluptate velit esse cillum do</p>
+                    *calamari*</span>aute irure 
+                    voluptate velit esse cillum do
+                    </p>
                 </div>
             </div>
             <Meals />

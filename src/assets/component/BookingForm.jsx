@@ -101,7 +101,7 @@ export default function BookingForm (props) {
                         <option value="Birthday">Birthday</option>
                         <option value="Anniversary">Anniversary</option>
                     </select>
-                    <input aria-label="On Click" className="submit-button"type="submit" value="Make Your reservation" disabled={!isFormValid()}/>
+                    <input aria-label="On Click" className="submit-button"type="submit" value="Book Now" disabled={!isFormValid()}/>
                     
                 </div>
             </form>
