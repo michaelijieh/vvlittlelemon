@@ -1,0 +1,358 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f1f1ec; */
+    /* background-color: red; */
+}
+
+a, h1, h2, h3, p, ol, ul, button, select, option, input {
+    margin: 0;
+    padding: 0;
+    color: unset; 
+    text-decoration: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 1000;
+}
+
+.right-text {
+    color: black;
+}
+
+ul, ol {
+    list-style: none;
+}
+ul > li {
+    color: grey;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.nav.full{
+    width: 100%;
+    position: fixed;
+    max-width: auto;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    display: flex;
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    background-color: #f1f1ec;
+    padding: 24px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    
+}
+
+.hm {
+    display: none;
+}
+
+.hm.out {
+    width: 24px;
+    display: none;
+    
+}
+
+.nav-items {
+    display: flex;
+    gap: 32px
+}
+
+.logo-text.mobile {
+    display: none;
+}
+
+/* Media queries for Nav bar */
+
+@media screen and (max-width: 767px) {
+.nav.short {
+    background-color: #f1f1ec;
+    padding: 24px 48px;
+}   
+
+.hm {
+    display: block;
+}
+.hm.out {
+    display: block;
+}
+
+.nav.full {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+
+.nav-items {
+    display: none;
+    gap: 32px;
+}
+
+.nav-items.mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.logo-text > p {
+    display: none;
+}
+
+.logo {
+    display: none;
+}
+.logo > p{
+    display: block;
+}
+.logo-text.mobile {
+    display: block;
+    display: flex;
+}
+
+.logo-text.mobile > p, .logo-text.mobile > img {
+    display: block;
+}
+
+
+}
+
+
+.header {
+    /* background-color: rgb(225, 108, 108); */
+    /* background: linear-gradient(to bottom, rgb(225, 108, 108), red); */
+    background: linear-gradient(to bottom, #f1f1ec, rgb(220, 237, 200));
+    padding: 64px 64px 0 64px;
+    margin: 0;
+    display: flex;
+    align-items: bottom;
+    justify-content: center;
+}
+
+
+.header-text-left > h1{
+    font-size: 4vw;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+}
+
+.header-text-left {
+    padding: 48px 0 0 0;
+    height: fit-content;
+    width: 480px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.header-text-right {
+    margin: 0;
+    padding: 48px 0 0 0;
+    height: fit-content;
+    width: 480px;
+    text-align: right;
+    color: grey;
+}
+
+.header-image {
+    width: 40vw;
+    /* height: 320px; */
+    transform: rotate(90deg);
+    align-self: center;
+}
+
+.reserve-button {
+    padding: 16px 64px;
+    border-radius: 16px;
+    /* background-color: olivedrab; */
+    background-color: black;
+    font-size: large;
+    color: rgb(11, 245, 148);
+}
+
+/* Media queries for Header */
+@media screen and (max-width: 767px) {
+  body {
+    width: auto;
+    font-size: 14px;
+  }
+
+  .header {
+    /* background-color: rgb(225, 108, 108); */
+    padding: 88px;
+    background: linear-gradient(to bottom, #f1f1ec, rgb(220, 237, 200));
+    margin: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.header-text-right {
+    display: none;
+}
+.header-text-left {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+.header-text-left > h1 {
+    width: 10em;
+    font-size: 2em;
+}
+.header-text-left > p {
+    display: none;
+}
+.reserve-button {
+    width: 290px;
+}
+
+
+.header-image {
+    width: 320px;
+    transform: rotate(90deg);
+    align-self: center;
+}
+
+}
+
+a:hover {
+    color: black;
+}
+
+input, select {
+    all: unset;
+    font-size: 20px;
+}
+
+label {
+    font-size: 12px;
+    font-weight: 1000;
+}
+
+
+.logo, .hm {
+    width: 32px;
+}
+
+
+.logo-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.submit-button {
+    width: auto;
+    background-color: black;
+    color: greenyellow;
+    padding: 8px 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 900;
+    border-color: #022A0B;
+    border: 2px solid #022A0B;
+    cursor: grab;
+}
+
+.submit-button:hover {
+    background-color: #022A0B;
+    color: lemonchiffon;
+}
+.submit-button:disabled {
+    color: darkgreen;
+    cursor: default;
+}
+.submit-button:disabled:hover {
+    color: grey;
+    cursor:default;
+}
+
+.booking-page {
+    height: 60vh;
+    padding: 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.footer {
+    background-color: greenyellow;
+    padding: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guest {
+    height: 4px;
+    width: 120px;
+    border-radius: 16px;
+    background-color: #022A0B;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+
+.booking-form {
+    padding: 64px;
+}
+
+.confirmed-booking {
+    height: 100%;
+    padding: 160px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+}
+.confirmed-booking > h1 {
+    text-align: center;
+    width: 320px;
+
+}
+
+@media screen and (max-width: 767px) {
+    
+}
+
+
+/* Media queries for Header */
+/* @media screen and (max-width: 479px) {
+ 
+} */
+
+/* Media queries */
+/* @media screen and (max-width: 767px) {
+  
+  }
+} */
+
+/* Styles for screens smaller than 480px (e.g., smartphones) */
+
+
+
+/* Media queries */

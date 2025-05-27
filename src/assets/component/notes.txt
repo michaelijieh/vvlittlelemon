@@ -1,0 +1,54 @@
+            {checkDay(date)}
+            <label htmlFor="res-date">Choose date</label>
+            <input type="date" min="2025-06-01" max="2025-06-30" id="res-date" value={date} onChange={handleDate}/>
+            <div>
+                <label htmlFor="res-time">Choose time</label>
+                <select>{availableTimes}</select>
+                {/* <select>{state.map(item => <option>{item}</option>)}</select> */}
+            </div>
+            <label htmlFor="res-date">Choose date</label>
+            <input type="date" min="2025-06-01" max="2025-06-30" id="res-date" value={props.date} onChange={handleDate}/>
+            <label htmlFor="res-time">Choose time</label>
+            <select>{props.availableTimes}</select>
+
+
+
+ function handleReserve (e) {
+        e.preventDefault();
+
+        alert([date, occasion, time, timeTomorrow, guest])
+
+        {time !== "Select" && setPicked(prev => [...prev, time])}
+        setTime("Select")
+
+        {timeTomorrow !== "Select" && setPickedTomorrow(prev => [...prev, timeTomorrow])}
+        setTimeTomorrow("Select")
+
+    }
+
+
+    return (
+        <div>
+           <form onSubmit={handleReserve}>
+                <label htmlFor="res-date">Choose date</label>
+                <input type="date" min={todayDate} max={tomorrowDate} id="res-date" value={date} onChange={handleDate}/>
+                <label htmlFor="res-time">Choose time</label>
+                {date === todayDate ? 
+                <select id="res-time" value={time} onChange={handleTime}>
+                    {hours}
+                </select> : 
+                <select id="res-time" value={timeTomorrow} onChange={handleTimeTomorrow}>
+                    {hoursTomorrow}
+                </select>}
+                <label htmlFor="guests">Number of guests: {guest}</label>
+                <input type="range" placeholder="1" min="1" max="10" id="guests" value={guest} onChange={handleGuest}/>
+                <label htmlFor="occasion">Occasion</label>
+                <select id="occasion" value={occasion} onChange={handleOccasion}>
+                    <option value="Birthday">Birthday</option>
+                    <option value="Anniversary">Anniversary</option>
+                </select>
+                <input type="submit" value="Make Your reservation"/>
+                
+            </form>
+        </div>
+    )
