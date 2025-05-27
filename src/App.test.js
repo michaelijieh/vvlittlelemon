@@ -1,29 +1,25 @@
 import { render, screen } from "@testing-library/react";
 import App from './App'
+import BookingForm from "./assets/component/BookingForm";
 
-test('Main component is present', () => {
+test('Mainsection component is present', () => {
     render(<App />);
     const componentElement = screen.getByText("MainSection");
     expect(componentElement).toBeInTheDocument();
 })
 
 
-import { render, fireEvent, screen } from "@testing-library/react";
-import App from "./App";
 
-test("Adds one", () => {
-  // render the App component
-  render(<App />); 
+
+test("Book now button is functional", () => {
+  render(<BookingForm />); 
   
-  // save the heading in a variable
   const heading = screen.getByTestId("currentNumber"); 
   
-  // save the button in a variable
-  const btn = screen.getByTestId("addOne"); 
+  const bookNow = screen.getByTestId("Book Now"); 
   
-  // click the btn
-  fireEvent.click(btn); 
+  fireEvent.click(bookNow); 
   
-  // test assumption
-  expect(heading).toHaveTextContent("2");
+  expect(heading).toHaveTextContent("Your booking has been reserved");
 });
+
