@@ -20,7 +20,7 @@ export default function BookingForm (props) {
 
      function handleReserve (e) {
         e.preventDefault();
-        alert([occasion, guests, date, time])
+        // alert([occasion, guests, date, time])
         props.submitForm(e)
     }
 
